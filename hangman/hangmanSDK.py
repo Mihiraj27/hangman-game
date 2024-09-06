@@ -11,7 +11,6 @@ c.execute('CREATE TABLE IF NOT EXISTS state ( id int NOT NULL,state varchar(255)
 c.execute('CREATE TABLE IF NOT EXISTS game ( game_id int NOT NULL,allocated_word varchar(255),cretaed_date DATE,updated_date DATE,state_id int,'
           + 'PRIMARY KEY (id), FOREIGN KEY (state_id) REFERENCES state(id))')
 
-
 #save Game with Game ID
 def add_game(word,stateid):
    c = cursor()
